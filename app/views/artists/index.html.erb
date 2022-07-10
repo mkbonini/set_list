@@ -2,5 +2,9 @@
 
 <h1>Artists</h1>
 <% @artists.each do |artist| %>
-    <h3><%= artist.name %>  <%= button_to "Edit #{artist.name}", "/artists/#{artist.id}/edit", method: :get %></h3>
+    <h3>
+    <%= artist.name %>  
+    <%= button_to "Edit #{artist.name}", "/artists/#{artist.id}/edit", method: :get %>
+    <%= button_to "Delete", "/artists/#{artist.id}/destroy", method: :delete%> 
+    </h3>
 <% end %>
